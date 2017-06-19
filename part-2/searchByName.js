@@ -9,6 +9,5 @@ var name = process.argv[2];
       toReturn.push(objForToReturn);
     }
   }
-  //find all matches for names that start with name and add to an array
-  //create an array of objects with each person's id and rep name
+
   console.log('Finding clients with name"' + name + '"...\n\n' , toReturn)
