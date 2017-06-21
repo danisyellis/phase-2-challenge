@@ -34,10 +34,10 @@ describe('myFunctions', function() {
 
   describe('filterBetween', function() {
     it('throws an error if invalid input', function() {
-      assert.throws(function() { functions.filterBetween(['array1', 'array2'], "not a number", 5) }, Error);
+      assert.throws(function() { functions.filterBetween([1,2], "not a number", 5) }, Error);
     })
     it('returns an array', function() {
-      assert.isArray( functions.filterBetween(['array1', 'array2'], 2, 6));
+      assert.isArray( functions.filterBetween([1, 2, 3, 4, 5, 6], 2, 6));
     })
   })
 })

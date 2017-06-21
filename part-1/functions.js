@@ -33,11 +33,16 @@ var numProps = function(obj) {
 }
 
 var filterBetween = function(array, min, max) {
-  var filteredArray = [];
   if(typeof(min) != 'number' || typeof(max) != 'number'){
     throw new Error;
   }
-  //It returns a new array containing only the elements that are greater than or equal to min and less than or equal to max.
+
+  var filteredArray = [];
+  for (var i=0; i<array.length; i++) {
+    if(array[i] >= min && array[i] <= max) {
+      filteredArray.push(array[i])
+    }
+  }
   return filteredArray;
 }
 
