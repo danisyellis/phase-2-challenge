@@ -13,12 +13,21 @@ describe('myFunctions', function() {
     })
   })
 
-  describe('getSnippet', function() {
+  describe('snippet', function() {
     it('throws an error if invalid input', function() {
-      assert.throws(function() { functions.getSnippet("test string", "notANumber") }, Error);
+      assert.throws(function() { functions.snippet("test string", "notANumber") }, Error);
     })
     it('returns a string', function() {
-      assert.typeOf( functions.getSnippet("test string", 9), 'string');
+      assert.typeOf( functions.snippet("test string", 9), 'string');
     })
   })
+
+  // describe('numProps', function() {
+  //   it('throws an error if invalid input', function() {
+  //     assert.throws(function() { functions.getSnippet("test string", "notANumber") }, Error);
+  //   })
+  //   it('returns a string', function() {
+  //     assert.typeOf( functions.getSnippet("test string", 9), 'string');
+  //   })
+  // })
 })

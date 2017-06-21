@@ -7,7 +7,7 @@ var weekDay = function(date) {
   return day
 }
 
-var getSnippet = function(string, maxLength) {
+var snippet = function(string, maxLength) {
   var snippedString = ""
   if(typeof(maxLength) != 'number') {
     throw new Error
@@ -23,5 +23,5 @@ var getSnippet = function(string, maxLength) {
 
 module.exports =  {
   weekDay,
-  getSnippet
+  snippet
 }
