@@ -7,6 +7,21 @@ var weekDay = function(date) {
   return day
 }
 
+var getSnippet = function(string, maxLength) {
+  var snippedString = ""
+  if(typeof(maxLength) != 'number') {
+    throw new Error
+  }
+
+  if(string.length> maxLength) {
+    snippedString = string.slice(0, maxLength)+ "..."
+  } else {
+    snippedString = string;
+  }
+  return snippedString
+}
+
 module.exports =  {
-  weekDay
+  weekDay,
+  getSnippet
 }
