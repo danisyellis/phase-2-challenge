@@ -32,8 +32,18 @@ var numProps = function(obj) {
   return number;
 }
 
+var filterBetween = function(array, min, max) {
+  var filteredArray = [];
+  if(typeof(min) != 'number' || typeof(max) != 'number'){
+    throw new Error;
+  }
+  //It returns a new array containing only the elements that are greater than or equal to min and less than or equal to max.
+  return filteredArray;
+}
+
 module.exports =  {
   weekDay,
   snippet,
-  numProps
+  numProps,
+  filterBetween
 }
