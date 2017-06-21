@@ -22,12 +22,13 @@ describe('myFunctions', function() {
     })
   })
 
-  // describe('numProps', function() {
-  //   it('throws an error if invalid input', function() {
-  //     assert.throws(function() { functions.getSnippet("test string", "notANumber") }, Error);
-  //   })
-  //   it('returns a string', function() {
-  //     assert.typeOf( functions.getSnippet("test string", 9), 'string');
-  //   })
-  // })
+  describe('numProps', function() {
+    it('throws an error if invalid input', function() {
+      assert.throws(function() { functions.numProps("not an object") }, Error);
+    })
+    it('returns a number', function() {
+      assert.typeOf( functions.numProps({name: 'Dominique', age: 30, phone: '555-555-5555'
+      }), 'number');
+    })
+  })
 })

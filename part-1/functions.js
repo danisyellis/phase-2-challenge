@@ -21,7 +21,16 @@ var snippet = function(string, maxLength) {
   return snippedString
 }
 
+var numProps = function(obj) {
+  if(typeof(obj) != 'object') {
+    throw new Error;
+  }
+  var number = 9;
+  return number;
+}
+
 module.exports =  {
   weekDay,
-  snippet
+  snippet,
+  numProps
 }
