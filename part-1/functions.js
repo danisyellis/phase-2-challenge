@@ -25,7 +25,10 @@ var numProps = function(obj) {
   if(typeof(obj) != 'object') {
     throw new Error;
   }
-  var number = 9;
+
+  var number;
+  var array=Object.getOwnPropertyNames(obj)
+  number = array.length;
   return number;
 }
 
